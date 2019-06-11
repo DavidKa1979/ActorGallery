@@ -10,12 +10,13 @@
 
 <body ng-controller="actorsCtrl">
   <div class="container-fluid">
+    <header class="jumbotron text-center">
     <h1 class="text-center">Actor Gallery</h1>
-
+  </header>
     <div class="row">
-      <div class="col-md-4 col-sm-6" ng-repeat="actor in actors">
-        <div class="card border rounded border-primary">
-          <img class="card-img-top" src="{{actor.image}}" alt="Card image">
+      <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors">
+        <div class="card round"> 
+          <img class="card-img-top img-responsive" src="{{actor.image}}" alt="Card image">
           <div class="card-body">
             <a href="{{actor.imdb}}" target="_blank">
             <h4 class="card-title">{{actor.fullName()}}</h4>
