@@ -10,17 +10,17 @@
 
 <body ng-controller="actorsCtrl">
   <div class="container-fluid">
-    <h1>Actor Gallery</h1>
+    <h1 class="text-center">Actor Gallery</h1>
 
     <div class="row">
-      <div class="col-md-4 col-sm-12" ng-repeat="actor in actors">
+      <div class="col-md-4 col-sm-6" ng-repeat="actor in actors">
         <div class="card border rounded border-primary">
           <img class="card-img-top" src="{{actor.image}}" alt="Card image">
           <div class="card-body">
             <a href="{{actor.imdb}}" target="_blank">
             <h4 class="card-title">{{actor.fullName()}}</h4>
             </a>
-            <h5 class="card-title">{{actor.birthday | date: "'Birthday- 'MMM d, y"}}</h5>
+            <h5 class="card-title">{{actor.birthday | date: "'Birthday: 'MMM d, y"}}</h5>
             <p class="card-text"></p>
             <a href="{{actor.imdb}}" class="btn btn-primary">See Profile</a>
           </div>
