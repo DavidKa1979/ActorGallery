@@ -50,6 +50,15 @@ app.controller("actorsCtrl", function($scope){
 
 }
 
+// it('should check ngShow', function() {
+//   var text = element(by.model('query'));
+//   var checkElem = element(by.css('.check-element'));
+
+//   expect(checkElem.isDisplayed()).toBe(false);
+//   text.click();
+//   expect(checkElem.isDisplayed()).toBe(true);
+// });
+
   // $scope.orderProp = "";
   // $scope.orderReverse = false;
   // $scope.orderByProp = function(propName) {
@@ -71,4 +80,5 @@ app.controller("actorsCtrl", function($scope){
     $scope.activeCard = actor
   }
   
+
 });

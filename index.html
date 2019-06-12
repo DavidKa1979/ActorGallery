@@ -15,7 +15,7 @@
       <h1 class="text-center">Actor Gallery</h1>
     </header>
     <form class="row">
-      <input class="form-control my-3" placeholder="Filter actor" ng-model="query">
+      <input type="text" class="form-control my-3" placeholder="Filter actor" ng-model="query" aria-label="Toggle ngShow">
       <h3 class="text-success mr-4">Order your actors:</h3>
       <select ng-model="orderProp">
         <option value="fname">
@@ -31,7 +31,11 @@
     </form>
 
     <div class="row">
-      <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp" ng-click="clickCard(actor)">
+      <div class="check-element animate-show-hide" ng-show="query">
+        I show up when your input is ampty.
+      </div>
+      <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp"
+        ng-click="clickCard(actor)">
         <div class="card round" ng-class="{'border-3d': actor===activeCard}">
           <img class="card-img-top img-responsive" src="{{actor.image}}" alt="Card image">
           <div class="card-body">
