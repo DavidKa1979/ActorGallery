@@ -66,5 +66,9 @@ app.controller("actorsCtrl", function($scope){
     
     
   // }
+  $scope.activeCard="";
+  $scope.clickCard = function(actor) {
+    $scope.activeCard = actor
+  }
   
 });

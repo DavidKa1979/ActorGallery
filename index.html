@@ -14,23 +14,25 @@
     <header class="jumbotron text-center">
       <h1 class="text-center">Actor Gallery</h1>
     </header>
-    <input class="form-control my-3" placeholder="Filter actor" ng-model="query">
-    
-    <select ng-model="orderProp">
-      <option value="fname">
-        First Name
-      </option>
-      <option value="lname">
+    <form class="row">
+      <input class="form-control my-3" placeholder="Filter actor" ng-model="query">
+      <h3 class="text-success mr-4">Order your actors:</h3>
+      <select ng-model="orderProp">
+        <option value="fname">
+          First Name
+        </option>
+        <option value="lname">
           Last Name
-      </option>
-      <option value="birthday">
-        Birthday
-      </option>
-    </select>
+        </option>
+        <option value="birthday">
+          Birthday
+        </option>
+      </select>
+    </form>
 
     <div class="row">
-      <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp">
-        <div class="card round">
+      <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp" ng-click="clickCard(actor)">
+        <div class="card round" ng-class="{'border-3d': actor===activeCard}">
           <img class="card-img-top img-responsive" src="{{actor.image}}" alt="Card image">
           <div class="card-body">
             <a href="{{actor.imdb}}" target="_blank">
