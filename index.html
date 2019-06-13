@@ -35,14 +35,14 @@
       <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp as filteredActors"
         ng-click="clickCard(actor)">
         <div class="card round" ng-class="{'border-3d': actor===activeCard}">
-          <img class="card-img-top img-responsive" src="{{actor.image}}">
+          <img class="card-img-top img-responsive" ng-src="{{actor.image}}">
           <div class="card-body">
             <a href="{{actor.imdb}}" target="_blank">
               <h4 class="card-title">{{actor.fullName()}}</h4>
             </a>
             <h5 class="card-title">{{actor.birthday | date: "'Birthday: 'MMM d, y"}}</h5>
             <p class="card-text"></p>
-            <a href="{{actor.imdb}}" class="btn btn-primary">See Profile</a>
+            <a ng-href="{{actor.imdb}}" class="btn btn-primary">See Profile</a>
           </div>
         </div>
       </div>

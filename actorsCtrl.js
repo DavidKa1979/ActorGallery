@@ -5,7 +5,7 @@ app.controller("actorsCtrl", function($scope, $http){
     this.fname = fname;
     this.lname = lname;
     this.image = image;
-    this.birthday = birthday;
+    this.birthday = new Date (birthday);
     this.imdb = imdb;
   };
 
