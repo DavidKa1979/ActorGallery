@@ -31,10 +31,8 @@
     </form>
 
     <div class="row">
-      <div class="check-element animate-show-hide" ng-show="query">
-        I show up when your input is ampty.
-      </div>
-      <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp"
+      
+      <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp as filteredActors"
         ng-click="clickCard(actor)">
         <div class="card round" ng-class="{'border-3d': actor===activeCard}">
           <img class="card-img-top img-responsive" src="{{actor.image}}">
@@ -48,6 +46,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="check-element animate-show-hide" ng-show="filteredActors.length===0">
+      I show up when your input is ampty.
     </div>
     <button class="btn btn-primary" ng-click="addActor()">Add Actor</button>
   </div>
