@@ -6,11 +6,11 @@
   <link rel="stylesheet" href="style.css">
   <script src="app.js"></script>
   <script src="actorsCtrl.js"></script>
-
+<script src="movieCtrl.js"></script>
 </head>
 
-<body ng-controller="actorsCtrl">
-  <div class="container">
+<body>
+  <div class="container" ng-controller="actorsCtrl">
     <header class="jumbotron text-center">
       <h1 class="text-center">Actor Gallery</h1>
     </header>
@@ -51,6 +51,23 @@
       I show up when your input is ampty.
     </div>
     <button class="btn btn-primary" ng-click="addActor()">Add Actor</button>
+  </div>
+
+  <div class="container" ng-controller="movieCtrl">
+
+    <div class="media my-4 border border-dark rounded-pill" ng-repeat="Movie in movies">
+      <img ng-src="{{Movie.poster}}" class="col-md-4 mr-3 imgw">
+      <div class="col-sm-4 media-body">
+        <h5 class="col-md-4 mt-0">{{Movie.mname}}</h5>
+        <h6>Main Stars</h6>
+        <ul>
+          <li ng-repeat="(key, value) in Movie.stars">
+{{ value }}
+          </li>
+        </ul>
+       </div>
+    </div>
+
   </div>
 </body>
 

@@ -26,7 +26,7 @@ app.controller("actorsCtrl", function($scope, $http){
   }, function(err) {
     console.error(err);
   })  
-
+  // $scope.actors = [];
   // $scope.actors.push(new Actor("Brie", "Larson", "https://m.media-amazon.com/images/M/MV5BMjExODkxODU3NF5BMl5BanBnXkFtZTgwNTM0MTk3NjE@._V1_SY1000_CR0,0,721,1000_AL_.jpg", "1989-10-01", "https://www.imdb.com/name/nm0488953/"));
   // $scope.actors.push(new Actor("Bradley", "Cooper", "https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_SY1000_CR0,0,650,1000_AL_.jpg", "1975-01-05", "https://www.imdb.com/name/nm0177896/"));
   // $scope.actors.push(new Actor("Emilia", "Clarke", "https://m.media-amazon.com/images/M/MV5BNjg3OTg4MDczMl5BMl5BanBnXkFtZTgwODc0NzUwNjE@._V1_SY1000_CR0,0,666,1000_AL_.jpg", "1986-10-23", "https://www.imdb.com/name/nm3592338/"));
