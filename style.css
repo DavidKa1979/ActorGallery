@@ -66,3 +66,10 @@ body {
     font-weight: bold
 }
 
+.imgr {
+    border-radius: 0px 20px 0px 60px;
+}
+
+.bold {
+    font-weight: bold;
+}

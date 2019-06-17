@@ -1,11 +1,12 @@
 app.controller("movieCtrl", function($scope,$http,convert) {
-    function Movie(mname, releasDate, length, poster, stars, diretor) {
+    function Movie(mname, releasDate, length, poster, stars, diretor, imdb) {
         this.mname = mname;
         this.releasDate = releasDate;
         this.length = length;
         this.poster = poster
         this.stars = stars;
         this.diretor = diretor;
+        this.imdb = imdb;
       };
      
       Movie.prototype.toMinutes = function() {
@@ -17,7 +18,7 @@ app.controller("movieCtrl", function($scope,$http,convert) {
       // on success
       for (var i = 0; i < res.data.length; i++) {
         var movie = new Movie(res.data[i].mname, res.data[i].releasDate, 
-          res.data[i].length, res.data[i].poster, res.data[i].stars, res.data[i].diretor);
+          res.data[i].length, res.data[i].poster, res.data[i].stars, res.data[i].diretor, res.data[i].imdb);
         $scope.movies.push(movie);
       }
     }, function(err) {
