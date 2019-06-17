@@ -1,0 +1,18 @@
+<div class="row media border border-dark rounded-pill card-body2">
+        <div class="col-md-4 mr-3">
+          <div>
+            <img class="shadow p-1 mb-5 bg-white rounded" ng-src="{{Movie.poster}}">
+          </div>
+          <a>{{Movie.toMinutes()}}</a>
+        </div>
+        <div class="col-md-8 ml-5 media-body">
+          <h5 class="mt-0">{{Movie.mname}}</h5>
+          <h6>Main Stars</h6>
+          <ul>
+            <li ng-repeat="(key, value) in Movie.stars">
+              {{ value }}
+            </li>
+          </ul>
+          <span>{{Movie.releasDate}}</span>
+        </div>
+      </div>

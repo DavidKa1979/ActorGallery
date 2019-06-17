@@ -1,0 +1,11 @@
+<div class="card round" ng-class="{'border-3d': actor===activeCard}">
+    <img class="card-img-top img-responsive" ng-src="{{actor.image}}">
+    <div class="card-body">
+      <a href="{{actor.imdb}}" target="_blank">
+        <h4 class="card-title">{{actor.fullName()}}</h4>
+      </a>
+      <h5 class="card-title">{{actor.birthday | date: "'Birthday: 'MMM d, y"}}</h5>
+      <p class="card-text"></p>
+      <a ng-href="{{actor.imdb}}" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>

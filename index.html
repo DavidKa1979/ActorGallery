@@ -6,8 +6,10 @@
   <link rel="stylesheet" href="style.css">
   <script src="app.js"></script>
   <script src="actorsCtrl.js"></script>
-<script src="movieCtrl.js"></script>
-<script src="convertSrv.js"></script>
+  <script src="movieCtrl.js"></script>
+  <script src="convertSrv.js"></script>
+  <script src="actorDir.js"></script>
+  <script src="movieDir.js"></script>
 </head>
 
 <body>
@@ -16,7 +18,8 @@
       <h1 class="text-center">Actor Gallery</h1>
     </header>
     <form class="row">
-      <input type="text" class="form-control my-3" placeholder="Filter actor" ng-model="query" aria-label="Toggle ngShow">
+      <input type="text" class="form-control my-3" placeholder="Filter actor" ng-model="query"
+        aria-label="Toggle ngShow">
       <h3 class="text-success mr-4">Order your actors:</h3>
       <select ng-model="orderProp">
         <option value="fname">
@@ -32,45 +35,25 @@
     </form>
 
     <div class="row">
-      
-      <div class="col-md-4 col-sm-6 pb-4 pt-4" ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp as filteredActors"
+
+      <div class="col-md-4 col-sm-6 pt-4"
+        ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp as filteredActors"
         ng-click="clickCard(actor)">
-        <div class="card round" ng-class="{'border-3d': actor===activeCard}">
-          <img class="card-img-top img-responsive" ng-src="{{actor.image}}">
-          <div class="card-body">
-            <a href="{{actor.imdb}}" target="_blank">
-              <h4 class="card-title">{{actor.fullName()}}</h4>
-            </a>
-            <h5 class="card-title">{{actor.birthday | date: "'Birthday: 'MMM d, y"}}</h5>
-            <p class="card-text"></p>
-            <a ng-href="{{actor.imdb}}" class="btn btn-primary">See Profile</a>
-          </div>
-        </div>
+        <!-- My Actors Diretive:  -->
+        <my-actor></my-actor>
       </div>
     </div>
-    <div class="check-element animate-show-hide my-3" ng-show="filteredActors.length===0">
+    <div class="check-element animate-show-hide" ng-show="filteredActors.length===0">
       I show up when your input is ampty.
     </div>
-    <button class="btn btn-primary" ng-click="addActor()">Add Actor</button>
+    <button class="btn btn-primary mt-4 back" ng-click="addActor()">Add Actor</button>
   </div>
 
-  <div class="container" ng-controller="movieCtrl">
+  <div class="container pt-4" ng-controller="movieCtrl">
 
-    <div class="media my-4 border border-dark rounded-pill" ng-repeat="Movie in movies">
-      <img ng-src="{{Movie.poster}}" class="col-md-4 mr-3 imgw">
-      <div class="col-sm-4 media-body">
-        <h5 class="col-md-4 mt-0">{{Movie.mname}}</h5>
-        <h6>Main Stars</h6>
-        <ul>
-          <li ng-repeat="(key, value) in Movie.stars">
-{{ value }}
-          </li>
-        </ul>
-        <p>{{Movie.releasDate}}</p>
-        <p>{{Movie.toMinutes()}}</p>
-       </div>
-    </div>
-
+    <div class="my-4" ng-repeat="Movie in movies">
+      <my-movie></my-movie>
+  </div>
   </div>
 </body>
 

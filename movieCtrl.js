@@ -1,4 +1,4 @@
-app.controller("movieCtrl", function($scope, convert) {
+app.controller("movieCtrl", function($scope,$http,convert) {
     function Movie(mname, releasDate, length, poster, stars, diretor) {
         this.mname = mname;
         this.releasDate = releasDate;
@@ -7,14 +7,27 @@ app.controller("movieCtrl", function($scope, convert) {
         this.stars = stars;
         this.diretor = diretor;
       };
+     
       Movie.prototype.toMinutes = function() {
         return convert.convertToMinutes(this.length);
       }
 
     $scope.movies = [];
-  $scope.movies.push(new Movie("Men in Black: International", "2019-07-13", "116", "https://m.media-amazon.com/images/M/MV5BMDZkODI2ZGItYTY5Yi00MTA4LWExY2ItM2ZmNjczYjM0NDg1XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX182_CR0,0,182,268_AL_.jpg", ["Chris Hemsworth", "Tessa Thompson", "Kumail Nanjiani"], "F. Gary Gray"));
-  $scope.movies.push(new Movie("Dark Phoenix", "2019-07-07", "113", "https://m.media-amazon.com/images/M/MV5BMjAwNDgxNTI0M15BMl5BanBnXkFtZTgwNTY4MDI1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg", ["James McAvoy", "Michael Fassbender", "Jennifer Lawrence"], "Simon Kinberg"));
-  $scope.movies.push(new Movie("John Wick: Chapter 3 - Parabellum", "2019-05-17", "131", "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_UX182_CR0,0,182,268_AL_.jpg", ["Keanu Reeves", "Halle Berry", "Ian McShane"], "Chad Stahelski"));
+    $http.get("movie.json").then(function(res) {
+      // on success
+      for (var i = 0; i < res.data.length; i++) {
+        var movie = new Movie(res.data[i].mname, res.data[i].releasDate, 
+          res.data[i].length, res.data[i].poster, res.data[i].stars, res.data[i].diretor);
+        $scope.movies.push(movie);
+      }
+    }, function(err) {
+      console.error(err);
+    })  
+
+    // $scope.movies = [];
+  // $scope.movies.push(new Movie("Men in Black: International", "2019-07-13", "116", "https://m.media-amazon.com/images/M/MV5BMDZkODI2ZGItYTY5Yi00MTA4LWExY2ItM2ZmNjczYjM0NDg1XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX182_CR0,0,182,268_AL_.jpg", ["Chris Hemsworth", "Tessa Thompson", "Kumail Nanjiani"], "F. Gary Gray"));
+  // $scope.movies.push(new Movie("Dark Phoenix", "2019-07-07", "113", "https://m.media-amazon.com/images/M/MV5BMjAwNDgxNTI0M15BMl5BanBnXkFtZTgwNTY4MDI1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg", ["James McAvoy", "Michael Fassbender", "Jennifer Lawrence"], "Simon Kinberg"));
+  // $scope.movies.push(new Movie("John Wick: Chapter 3 - Parabellum", "2019-05-17", "131", "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_UX182_CR0,0,182,268_AL_.jpg", ["Keanu Reeves", "Halle Berry", "Ian McShane"], "Chad Stahelski"));
    
   console.log($scope.movies);
   

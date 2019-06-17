@@ -1,0 +1,28 @@
+[
+{
+    "mname":"Men in Black: International",
+    "releasDate":"2019-07-13",
+    "length":"116",
+    "poster":"https://m.media-amazon.com/images/M/MV5BMDZkODI2ZGItYTY5Yi00MTA4LWExY2ItM2ZmNjczYjM0NDg1XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "stars":["Chris Hemsworth", "Tessa Thompson", "Kumail Nanjiani"],
+    "diretor":"F. Gary Gray"
+},
+
+{
+    "mname":"Dark Phoenix",
+    "releasDate":"2019-07-07",
+    "length":"113",
+    "poster":"https://m.media-amazon.com/images/M/MV5BMjAwNDgxNTI0M15BMl5BanBnXkFtZTgwNTY4MDI1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "stars":["Keanu Reeves", "Halle Berry", "Ian McShane"],
+    "diretor":"Chad Stahelski"
+},
+
+{
+    "mname":"John Wick: Chapter 3 - Parabellum",
+    "releasDate":"2019-05-17",
+    "length":"131",
+    "poster":"https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "stars":["Keanu Reeves", "Halle Berry", "Ian McShane"],
+    "diretor":"Chad Stahelski"
+}
+]
