@@ -1,5 +1,55 @@
 [
 {
+    "mname":"The Shawshank Redemption",
+    "releasDate":"1994-10-14",
+    "length":"142",
+    "poster":"https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "stars":["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
+    "diretor":"Frank Darabont",
+    "imdb":"https://www.imdb.com/title/tt0111161/"    
+},  
+
+{
+    "mname":"The Godfather",
+    "releasDate":"1972-03-24",
+    "length":"175",
+    "poster":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR3,0,182,268_AL_.jpg",
+    "stars":["Marlon Brando", "Al Pacino", "James Caan"],
+    "diretor":"Francis Ford Coppola",
+    "imdb":"https://www.imdb.com/title/tt0068646/"    
+},
+
+{
+    "mname":"Il buono, il brutto, il cattivo",
+    "releasDate":"1966-10-23",
+    "length":"161",
+    "poster":"https://m.media-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "stars":["Clint Eastwood", "Eli Wallach", "Lee Van Cleef"],
+    "diretor":"Sergio Leone",
+    "imdb":"https://www.imdb.com/title/tt0060196/"
+},
+
+{
+    "mname":"The Dark Knight",
+    "releasDate":"2008-07-24",
+    "length":"152",
+    "poster":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "stars":["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "diretor":"Christopher Nolan",
+    "imdb":"https://www.imdb.com/title/tt0468569/"    
+},
+
+{
+    "mname":"Pulp Fiction",
+    "releasDate":"1994-10-14",
+    "length":"154",
+    "poster":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR1,0,182,268_AL_.jpg",
+    "stars":["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+    "diretor":"Quentin Tarantino",
+    "imdb":"https://www.imdb.com/title/tt0110912/"    
+},
+
+{ 
     "mname":"Men in Black: International",
     "releasDate":"2019-07-13",
     "length":"116",
@@ -27,5 +77,26 @@
     "stars":["Keanu Reeves", "Halle Berry", "Ian McShane"],
     "diretor":"Chad Stahelski",
     "imdb":"https://www.imdb.com/title/tt6146586/"
+},
+
+{
+    "mname":"Inception",
+    "releasDate":"2019-05-17",
+    "length":"148",
+    "poster":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "stars":["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+    "diretor":"Christopher Nolan",
+    "imdb":"https://www.imdb.com/title/tt1375666/"
+},
+
+{
+    "mname":"The Silence of the Lambs",
+    "releasDate":"1991-04-26",
+    "length":"118",
+    "poster":"https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "stars":["Jodie Foster", "Anthony Hopkins", "Lawrence A. Bonney"],
+    "diretor":"Jonathan Demme",
+    "imdb":"https://www.imdb.com/title/tt0102926/"
 }
+
 ]
