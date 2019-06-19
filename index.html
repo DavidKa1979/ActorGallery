@@ -2,62 +2,41 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="app.js"></script>
+  <script src="homeCtrl.js"></script>
   <script src="actorsCtrl.js"></script>
   <script src="movieCtrl.js"></script>
   <script src="convertSrv.js"></script>
   <script src="actorDir.js"></script>
   <script src="movieDir.js"></script>
+  <script src="movieDetailsCtrl.js" ></script>
 </head>
 
 <body>
-  <div class="container" ng-controller="actorsCtrl">
-    <header class="jumbotron text-center">
-      <h1 class="text-center">Actor Gallery</h1>
-    </header>
-    <form class="row">
-      <input type="text" class="form-control my-3" placeholder="Filter actor" ng-model="query"
-        aria-label="Toggle ngShow">
-      <h3 class="text-success mr-4">Order your actors:</h3>
-      <select ng-model="orderProp">
-        <option value="fname">
-          First Name
-        </option>
-        <option value="lname">
-          Last Name
-        </option>
-        <option value="birthday">
-          Birthday
-        </option>
-      </select>
-    </form>
-
-    <div class="row">
-
-      <div class="col-md-4 col-sm-6 pt-4"
-        ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp as filteredActors"
-        ng-click="clickCard(actor)">
-        <!-- My Actors Diretive:  -->
-        <my-actor></my-actor>
-      </div>
-    </div>
-    <div class="check-element animate-show-hide" ng-show="filteredActors.length===0">
-      I show up when your input is ampty.
-    </div>
-    <button class="btn btn-primary mt-4 back" ng-click="addActor()">Add Actor</button>
-  </div>
-  <br>
-
-  <br>
-  
-  <div class="container pt-4 border-top" ng-controller="movieCtrl">
-    <h1 class="text-center text-light">Top Movies</h1>
-    <div class="my-4" ng-repeat="Movie in movies">
-      <my-movie></my-movie>
-  </div>
-  </div>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#!/actors">Actors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/movie">Movies</a>
+          </li> 
+        </ul>
+      </div>  
+    </nav>
+    <br>
+  <ng-view></ng-view>
 </body>
 
 </html>

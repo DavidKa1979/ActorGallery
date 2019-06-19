@@ -1,7 +1,7 @@
 <div class="row media border border-dark rounded-pill card-body2">
   <div class="col-md-4 mr-3">
     <div>
-      <img class="shadow p-1 mb-5 bg-white imgr" ng-src="{{Movie.poster}}">
+      <img class="shadow p-1 mb-5 bg-white imgr" ng-click="openMovieDetails(Movie)" ng-src="{{Movie.poster}}">
     </div>
     <h6>Movie Duration:</h6>
     <a>{{Movie.toMinutes()}}</a>

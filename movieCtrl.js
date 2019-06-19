@@ -1,4 +1,4 @@
-app.controller("movieCtrl", function($scope,$http,convert) {
+app.controller("movieCtrl", function($location,$scope,$http,convert,) {
     function Movie(mname, releasDate, length, poster, stars, diretor, imdb) {
         this.mname = mname;
         this.releasDate = releasDate;
@@ -24,6 +24,12 @@ app.controller("movieCtrl", function($scope,$http,convert) {
     }, function(err) {
       console.error(err);
     })  
+
+
+    $scope.openMovieDetails = function(movie) {
+      var index = $scope.movies.indexOf(movie);
+      $location.path("/movie/" + index);  
+    }
 
     // $scope.movies = [];
   // $scope.movies.push(new Movie("Men in Black: International", "2019-07-13", "116", "https://m.media-amazon.com/images/M/MV5BMDZkODI2ZGItYTY5Yi00MTA4LWExY2ItM2ZmNjczYjM0NDg1XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX182_CR0,0,182,268_AL_.jpg", ["Chris Hemsworth", "Tessa Thompson", "Kumail Nanjiani"], "F. Gary Gray"));

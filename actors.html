@@ -1,0 +1,39 @@
+<div class="container">
+    <header class="jumbotron text-center">
+      <h1 class="text-center">Actor Gallery</h1>
+    </header>
+    <form class="row">
+      <input type="text" class="form-control my-3" placeholder="Filter actor" ng-model="query"
+        aria-label="Toggle ngShow">
+      <h3 class="text-success mr-4">Order your actors:</h3>
+      <select ng-model="orderProp">
+        <option value="fname">
+          First Name
+        </option>
+        <option value="lname">
+          Last Name
+        </option>
+        <option value="birthday">
+          Birthday
+        </option>
+      </select>
+    </form>
+
+    <div class="row">
+
+      <div class="col-md-4 col-sm-6 pt-4"
+        ng-repeat="actor in actors | filter : filterAct | orderBy : orderProp as filteredActors"
+        ng-click="clickCard(actor)">
+        <!-- My Actors Diretive:  -->
+        <my-actor></my-actor>
+      </div>
+    </div>
+    <div class="check-element animate-show-hide" ng-show="filteredActors.length===0">
+      I show up when your input is ampty.
+    </div>
+    <button class="btn btn-primary mt-4 back" ng-click="addActor()">Add Actor</button>
+  </div>
+  <br>
+
+  <br>
+  
