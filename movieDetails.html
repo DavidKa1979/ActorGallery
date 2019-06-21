@@ -1,13 +1,15 @@
-<div class="container">
-    <h1>movie Details</h1>
-    <P>{{Movie.mname}}</P>
-    <p>{{Movie.poster}}</p>
-    <p>Duration: {{Movie.toMinutes()}}</p>
-    <h5>Main Stars:</h5>
-    <ul>
-        <li ng-repeat="(key, value) in Movie.stars">
+<div class="container card card-body bg-secondary text-white text-center">
+    <h1 class="h1 text-primary">movie Details:</h1>
+    <h2 class="h1">{{movie.mname}}</h2>
+    <div><img src="{{movie.poster}}" alt=""></div>
+    <p>Duration: {{movie.toMinutes()}}</p>
+    <h5 class="h1">Main Stars:</h5>
+    <ul class="list-unstyled font-weight-bold">
+        <li ng-repeat="(key, value) in movie.stars">
             {{ value }}
         </li>
     </ul>
-    <p>releas Date: {{Movie.releasDate}}</p>
+    <h5 class="h1">Movie Director</h5>
+    <p class="font-weight-bold"> {{movie.director}} </p>
+    <p>releas Date: {{movie.releasDate}}</p>
 </div>

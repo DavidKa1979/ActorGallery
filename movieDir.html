@@ -1,29 +1,31 @@
 <div class="row media border border-dark rounded-pill card-body2">
   <div class="col-md-4 mr-3">
     <div>
-      <img class="shadow p-1 mb-5 bg-white imgr" ng-click="openMovieDetails(Movie)" ng-src="{{Movie.poster}}">
+      <img class="shadow p-1 mb-5 bg-white imgr" ng-click="openMovieDetails(movie)" ng-src="{{movie.poster}}">
     </div>
     <h6>Movie Duration:</h6>
-    <a>{{Movie.toMinutes()}}</a>
+    <a>{{movie.toMinutes()}}</a>
   </div>
   <div class="col-md-8 ml-5 media-body justify-content-between reverse">
     <div class=" mb-5">
-    <a href="{{Movie.imdb}}" target="_blank">
+    <a href="{{movie.imdb}}" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/250px-IMDB_Logo_2016.svg.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="Responsive image">
-      <h4 class="mt-0 text-info">{{Movie.mname}}</h4>
+      <h4 class="mt-0 text-info">{{movie.mname}}</h4>
     </a>
     <h5>Main Stars</h5>
     <ul>
-      <li ng-repeat="(key, value) in Movie.stars">
+      <li ng-repeat="(key, value) in movie.stars">
         {{ value }}
       </li>
     </ul>
+    <h5>Movie Director</h5>
+    <p> {{movie.director}} </p>
   </div>
   <div class="row">
     <h6 class="mr-1">
       releas Date: 
     </h6>
-    <span>{{Movie.releasDate}}</span>
+    <span>{{movie.releasDate}}</span>
   </div>
   </div>
 </div>

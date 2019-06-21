@@ -1,5 +1,6 @@
 var app = angular.module("movieApp", ["ngRoute"]);
 app.config(function ($routeProvider) {
+
     $routeProvider.
     when("/", {
         templateUrl: "home.html",
@@ -14,4 +15,4 @@ app.config(function ($routeProvider) {
         templateUrl: "movieDetails.html",
         controller: "movieDetailsCtrl"
     });
-        })
+})
